@@ -1,13 +1,15 @@
-spring:
-  application:
-    name: item-service
+# yml  yaml
+# Yet Another Markup Language
+
+spring:  application:    name: item-service
+
+  cloud:
+    config:
+      override-none: true
     
-server:
-  port: 8001
+server:  port: 8001
 
 eureka:
   client:
     service-url:
-      # 默认地点,要有公共云服务提供
-      #如果是私有服务器，必须写defaultZone
-      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka
